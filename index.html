@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UdaanXAI | Elite AI Automation Agency</title>
+    <meta name="description"
+        content="Deploying elite AI agents for business. Scale, Automate, and Launch the future of enterprise operations with UdaanXAI.">
+    <!-- Favicons -->
+    <link rel="icon" href="https://framerusercontent.com/images/Yf3mMch5p3D8b9F91OZ3nT5gDCA.svg"
+        media="(prefers-color-scheme: light)">
+    <link rel="icon" href="https://framerusercontent.com/images/2pf9cwcVoXRUDv8pzx6dATeyapw.webp"
+        media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Three.js for Celestial Background -->
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loader-planet-wrap">
+            <div class="loader-planet"></div>
+            <div class="loader-planet-orbit">
+                <div class="loader-moon"></div>
+            </div>
+        </div>
+    </div>
+    <canvas id="bg-canvas"></canvas>
+    <div id="mouse-planet"></div>
+
+    <!-- NAVBAR -->
+    <div class="nav-wrap" id="navbar">
+        <nav class="nav">
+            <a href="#" class="nav-logo">
+                <span
+                    style="font-family: var(--font-h); font-weight: 800; font-size: 22px; letter-spacing: -0.04em;">UDAANXAI</span>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#services">Process</a>
+                <a href="#contact">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="#contact" class="btn-tpl">Get in touch</a>
+            </div>
+            <div class="hamburger" id="ham">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </div>
+    <div class="mob-menu" id="mob">
+        <a href="#services">Services</a><a href="#services">Process</a><a href="#contact">Pricing</a><a
+            href="#contact">Contact</a>
+        <a href="#contact" class="btn-p" style="text-align:center;margin-top:8px">Get in touch</a>
+    </div>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-mesh"></div>
+            <div class="hero-content rv">
+                <div class="hero-logo-box">
+                    <svg class="hero-logo futuristic-rocket" viewBox="0 0 60 100" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="logoGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="2" result="glow" />
+                                <feMerge>
+                                    <feMergeNode in="glow" />
+                                    <feMergeNode in="glow" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                            <linearGradient id="bodyGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" />
+                                <stop offset="100%" stop-color="#e2e8f0" />
+                            </linearGradient>
+                            <linearGradient id="finGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+                                <stop offset="0%" stop-color="#f1f5f9" />
+                                <stop offset="100%" stop-color="#cbd5e1" />
+                            </linearGradient>
+                        </defs>
+                        <g filter="url(#logoGlow)">
+                            <path
+                                d="M30 4 C30 4 42 15 42 35 L42 65 C42 70 38 75 30 78 C22 75 18 70 18 65 L18 35 C18 15 30 4 30 4 Z"
+                                fill="url(#bodyGrad)" />
+                            <path d="M18 50 C14 55 8 65 4 80 L12 78 C14 70 16 62 18 58 Z" fill="url(#finGrad)" />
+                            <path d="M42 50 C46 55 52 65 56 80 L48 78 C46 70 44 62 42 58 Z" fill="url(#finGrad)" />
+                            <path d="M26 75 L30 92 L34 75" fill="url(#finGrad)" />
+                        </g>
+                    </svg>
+                </div>
+                <h1>UDAANXAI</h1>
+                <div class="hero-spacer"></div>
+                <div class="roller-box">
+                    <span>We</span>
+                    <div class="roller-container">
+                        <div class="roller">
+                            <span class="roll-item">Scale</span>
+                            <span class="roll-item">Automate</span>
+                            <span class="roll-item">Design</span>
+                            <span class="roll-item">Launch</span>
+                            <span class="roll-item">Scale</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn-p">Scale My Business <svg class="arrow-icon" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg></a>
+                    <a href="#services" class="btn-s">Transform My Brand <svg class="arrow-icon" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- SERVICES -->
+        <section class="sec svc-sec" id="services">
+            <div class="sec-inner" style="gap:40px">
+                <div class="sec-hdr rv">
+                    <div class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v4l2 2" />
+                        </svg>SERVICES</div>
+                    <h2 class="sec-title">Smarter Services, <em
+                            style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">Built with
+                            AI</em></h2>
+                    <p class="sec-sub">Everything you need to automate operations, boost productivity</p>
+                </div>
+
+                <!-- Row 1: Task Tracker + AI Orb -->
+                <div class="svc-row rv">
+                    <div class="svc-card">
+                        <div class="svc-card-visual">
+                            <div class="task-tracker">
+                                <div class="task-tracker-inner">
+                                    <div class="task-item">
+                                        <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                <circle cx="9" cy="7" r="4" />
+                                            </svg></div>Employee Tracking<div class="task-status"><svg class="refresh"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M21 2v6h-6" />
+                                                <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                                            </svg></div>
+                                    </div>
+                                    <div class="task-item highlighted">
+                                        <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <path d="M12 6v6l4 2" />
+                                            </svg></div>Payment reminder<div class="task-status"><svg
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M20 6L9 17l-5-5" />
+                                            </svg></div>
+                                    </div>
+                                    <div class="task-item">
+                                        <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <path d="M12 8v4" />
+                                                <path d="M12 16h.01" />
+                                            </svg></div><span style="color:rgba(255,165,0,.7)">Cost Management</span>
+                                        <div class="task-status"><svg class="refresh" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M21 2v6h-6" />
+                                                <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                                            </svg></div>
+                                    </div>
+                                    <div class="task-item">
+                                        <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                                <path d="M3 9h18" />
+                                            </svg></div>Social media post<div class="task-status"><svg
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M20 6L9 17l-5-5" />
+                                            </svg></div>
+                                    </div>
+                                    <!-- Duplicate for seamless loop -->
+                                    <div class="task-item">
+                                        <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                <circle cx="9" cy="7" r="4" />
+                                            </svg></div>Employee Tracking<div class="task-status"><svg class="refresh"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M21 2v6h-6" />
+                                                <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                                            </svg></div>
+                                    </div>
+                                    <div class="task-item highlighted">
+                                        <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <path d="M12 6v6l4 2" />
+                                            </svg></div>Payment reminder<div class="task-status"><svg
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M20 6L9 17l-5-5" />
+                                            </svg></div>
+                                    </div>
+                                    <div class="task-item">
+                                        <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <path d="M12 8v4" />
+                                                <path d="M12 16h.01" />
+                                            </svg></div><span style="color:rgba(255,165,0,.7)">Cost Management</span>
+                                        <div class="task-status"><svg class="refresh" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path d="M21 2v6h-6" />
+                                                <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                                            </svg></div>
+                                    </div>
+                                    <div class="task-item">
+                                        <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                                <path d="M3 9h18" />
+                                            </svg></div>Social media post<div class="task-status"><svg
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M20 6L9 17l-5-5" />
+                                            </svg></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="svc-card-info">
+                            <h3>Automate repetitive tasks</h3>
+                            <p>We help you streamline internal operations by automating manual workflows</p>
+                        </div>
+                    </div>
+                    <div class="svc-card wide">
+                        <div class="svc-card-visual">
+                            <div class="orb-container">
+                                <div class="float-icon fi-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                    </svg></div>
+                                <div class="float-icon fi-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 8v4l2 2" />
+                                    </svg></div>
+                                <div class="float-icon fi-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <path d="m22 6-10 7L2 6" />
+                                    </svg></div>
+                                <div class="float-icon fi-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                    </svg></div>
+                                <div class="ai-orb">
+                                    <svg viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        style="width: 70px; height: 42px;">
+                                        <!-- Node connections -->
+                                        <path d="M25 30H35" stroke="rgba(255,255,255,0.7)" stroke-width="6"
+                                            stroke-linecap="round" />
+                                        <path d="M55 30H65C70 30 70 15 75 15H85" stroke="rgba(255,255,255,0.7)"
+                                            stroke-width="6" stroke-linecap="round" />
+                                        <path d="M55 30H65C70 30 70 45 75 45H85" stroke="rgba(255,255,255,0.7)"
+                                            stroke-width="6" stroke-linecap="round" />
+
+                                        <!-- Node circles -->
+                                        <circle cx="15" cy="30" r="8" stroke="rgba(255,255,255,0.7)" stroke-width="6"
+                                            fill="none" />
+                                        <circle cx="45" cy="30" r="8" stroke="rgba(255,255,255,0.7)" stroke-width="6"
+                                            fill="none" />
+                                        <circle cx="85" cy="15" r="8" stroke="rgba(255,255,255,0.7)" stroke-width="6"
+                                            fill="none" />
+                                        <circle cx="85" cy="45" r="8" stroke="rgba(255,255,255,0.7)" stroke-width="6"
+                                            fill="none" />
+                                    </svg>
+                                </div>
+                                <div class="float-icon fi-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                                        <path d="M3 9h18" />
+                                        <path d="M9 21V9" />
+                                    </svg></div>
+                                <div class="float-icon fi-6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                        <path d="M2 17l10 5 10-5" />
+                                        <path d="M2 12l10 5 10-5" />
+                                    </svg></div>
+                                <div class="float-icon fi-7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <path
+                                            d="M4 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4zm0 8a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H4z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                        <div class="svc-card-info">
+                            <h3>Automated Workflows</h3>
+                            <p>Boost efficiency across teams with smart automation Build intelligent workflows that
+                                automate multi-step processes across tools and platforms</p>
+                        </div>
+                    </div>
+                </div><!-- Row 2: Search UI + Code Editor + Node Graph -->
+                <div class="svc-row rv rv-d1">
+                    <div class="svc-card">
+                        <div class="svc-card-visual">
+                            <div class="search-ui">
+                                <div class="search-bar">
+                                    <div class="scrolling-placeholder" id="searchPlaceholder">
+                                        <div class="placeholder-text active">Software & App Industry</div>
+                                        <div class="placeholder-text">High Converting Customer</div>
+                                        <div class="placeholder-text">Automate repetetive tasks</div>
+                                    </div>
+                                    <div class="search-btn">Research</div>
+                                </div>
+                                <div class="search-results-container">
+                                    <div class="search-result">
+                                        <div class="sr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                <circle cx="9" cy="7" r="4" />
+                                            </svg></div>Software & App Industry<span class="sr-arrow">↗</span>
+                                    </div>
+                                    <div class="search-result">
+                                        <div class="sr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                <circle cx="9" cy="7" r="4" />
+                                            </svg></div>UX & UI Design Industry<span class="sr-arrow">↗</span>
+                                    </div>
+                                    <div class="search-result">
+                                        <div class="sr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                <circle cx="9" cy="7" r="4" />
+                                            </svg></div>High Converting Customer<span class="sr-arrow">↗</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="svc-card-info">
+                            <h3>Real-Time Intelligence</h3>
+                            <p>Make smarter decisions with live data insights Tap into real-time data</p>
+                        </div>
+                    </div>
+                    <div class="svc-card">
+                        <div class="svc-card-visual">
+                            <div class="code-editor">
+                                <div class="code-titlebar"><span class="code-dot r"></span><span
+                                        class="code-dot y"></span><span class="code-dot g"></span>
+                                    <div class="code-tabs"><span>🔍</span><span>Code &lt;/&gt;</span></div>
+                                </div>
+                                <div class="code-body">
+                                    <div class="code-line"><span class="code-num">1</span><span class="code-text"><span
+                                                class="kw">class</span> <span class="fn">AutomationAgent</span>:</span>
+                                    </div>
+                                    <div class="code-line"><span class="code-num">2</span><span
+                                            class="code-text">&nbsp;&nbsp;<span class="kw">def</span> <span
+                                                class="fn">__init__</span>(<span class="self">self</span>,
+                                            activation_limit):</span></div>
+                                    <div class="code-line"><span class="code-num">3</span><span
+                                            class="code-text">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                class="self">self</span>.activation_limit
+                                            =</span></div>
+                                    <div class="code-line"><span class="code-num">4</span><span
+                                            class="code-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;activation_limit</span>
+                                    </div>
+                                    <div class="code-line"><span class="code-num">5</span><span
+                                            class="code-text">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                class="self">self</span>.current_mode =
+                                            <span class="str">"idle"</span></span></div>
+                                    <div class="code-line"><span class="code-num">6</span><span
+                                            class="code-text"></span></div>
+                                    <div class="code-line"><span class="code-num">7</span><span
+                                            class="code-text">&nbsp;&nbsp;<span class="kw">def</span> <span
+                                                class="fn">evaluate_task</span>(<span class="self">self</span>,
+                                            workload_value):</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="svc-card-info">
+                            <h3>Custom AI Agent development</h3>
+                            <p>We develop custom AI agents that integrate seamlessly with your tools</p>
+                        </div>
+                    </div>
+                    <div class="svc-card">
+                        <div class="svc-card-visual">
+                            <div class="node-graph">
+                                <div class="node-dot nd-1"></div>
+                                <div class="node-dot nd-2"></div>
+                                <div class="node-dot nd-3"></div>
+                                <div class="node-dot nd-4"></div>
+                                <div class="node-dot nd-5"></div>
+                                <div class="node-dot nd-6"></div>
+                                <div class="node-dot node-center"><svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5">
+                                        <path d="M12 3l1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5L12 3z" />
+                                    </svg></div>
+                            </div>
+                        </div>
+                        <div class="svc-card-info">
+                            <h3>AI Strategy Consulting</h3>
+                            <p>Get expert guidance to implement AI solutions that drive business growth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="glow"></div>
+        </section>
+
+        <!-- FEATURE BLOCKS -->
+        <section class="sec" style="padding:60px 0">
+            <div class="feat-blocks">
+                <div class="feat-row rv">
+                    <div class="feat-text">
+                        <div class="pill-tag">Custom Projects</div>
+                        <h3>Custom AI Solutions</h3>
+                        <p>We design and develop bespoke artificial intelligence solutions tailored to your unique
+                            challenges. Every model is built from scratch to align with your goals and deliver
+                            measurable impact.</p>
+                        <div class="feat-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>Tailored to your specific business needs</div>
+                        <div class="feat-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>Built with scalable architecture</div>
+                    </div>
+                    <div class="feat-img">
+                        <div class="perf-dash"
+                            style="padding:15px; background:rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.05); border-radius:15px">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px">
+                                <div style="display:flex; align-items:center; gap:8px">
+                                    <div
+                                        style="width:24px; height:24px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.1)">
+                                    </div>
+                                    <span style="font-size:12px; font-weight:500; letter-spacing:-0.48px">Hey
+                                        David!</span>
+                                </div>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" style="opacity:0.3">
+                                    <path d="M18 6L6 18M6 6l12 12" />
+                                </svg>
+                            </div>
+
+                            <div
+                                style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:8px; padding:12px; margin-bottom:10px">
+                                <div
+                                    style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px">
+                                    <div style="display:flex; align-items:center; gap:8px">
+                                        <div
+                                            style="width:16px; height:16px; border-radius:4px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center">
+                                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                            </svg>
+                                        </div>
+                                        <span style="font-size:11px">Customer Support Chatbot</span>
+                                    </div>
+                                    <div
+                                        style="width:12px; height:12px; border:2px solid rgba(255,255,255,0.2); border-top-color:#fff; border-radius:50%; animation: spin 1s linear infinite">
+                                    </div>
+                                </div>
+                                <div style="font-size:10px; color:rgba(255,255,255,0.9)">90% Finsihed</div>
+                            </div>
+
+                            <div style="margin-top:15px">
+                                <div style="font-size:11px; opacity:0.4; margin-bottom:10px">Schedule</div>
+                                <div style="display:flex; gap:4px">
+                                    <div
+                                        style="width:24px; height:20px; border-radius:4px; background:var(--accent); font-size:9px; display:flex; align-items:center; justify-content:center">
+                                        Mo</div>
+                                    <div
+                                        style="width:24px; height:20px; border-radius:4px; background:rgba(255,255,255,0.03); font-size:9px; display:flex; align-items:center; justify-content:center">
+                                        Tu</div>
+                                    <div
+                                        style="width:24px; height:20px; border-radius:4px; background:rgba(255,255,255,0.03); font-size:9px; display:flex; align-items:center; justify-content:center">
+                                        We</div>
+                                    <div
+                                        style="width:24px; height:20px; border-radius:4px; background:rgba(255,255,255,0.03); font-size:9px; display:flex; align-items:center; justify-content:center">
+                                        Th</div>
+                                    <div
+                                        style="width:24px; height:20px; border-radius:4px; background:rgba(255,255,255,0.03); font-size:9px; display:flex; align-items:center; justify-content:center">
+                                        Fr</div>
+                                </div>
+                            </div>
+
+                            <div
+                                style="margin-top:15px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:8px; padding:10px">
+                                <div style="display:flex; align-items:center; gap:8px">
+                                    <div
+                                        style="width:16px; height:16px; border-radius:4px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center">
+                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M23 7l-7 5 7 5V7z" />
+                                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div style="font-size:10px">Discovery call</div>
+                                        <div style="font-size:8px; opacity:0.3">10:00 am to 10:30 am</div>
+                                    </div>
+                                    <div style="margin-left:auto; opacity:0.2">⋮</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feat-row rv" style="flex-direction:row-reverse">
+                    <div class="feat-text">
+                        <div class="pill-tag">AI Assistant</div>
+                        <h2 class="sec-title" style="text-align:left;margin-bottom:15px">Voice Agents</h2>
+                        <p style="margin-bottom:20px; color:rgba(255,255,255,0.7); line-height:1.6">Human-like AI voice
+                            responses Automates support + lead gen Works 24/7</p>
+                        <div style="display:flex; gap:12px">
+                            <div class="btn-feat">Voice agents</div>
+                            <div class="btn-feat">Many more</div>
+                        </div>
+                    </div>
+                    <div class="feat-img">
+                        <div class="voice-ui"
+                            style="padding:0; width:100%; height:100%; position:relative; overflow:hidden">
+                            <!-- Siri Orb visual -->
+                            <div class="orb-container"
+                                style="position:absolute; top:20%; left:50%; transform:translateX(-50%); width:120px; height:120px; display:flex; align-items:center; justify-content:center">
+                                <div class="siri-orb"></div>
+                            </div>
+                            <div
+                                style="position:absolute; top:32%; left:0; right:0; transform:translateY(-50%); text-align:center; padding:0 20px">
+                                <div style="font-size:16px; font-weight:500; color:#fff; margin-bottom:8px">What can I
+                                    help with?</div>
+                                <div style="font-size:11px; color:rgba(255,255,255,0.4); line-height:1.4">
+                                    Weather you want help in customer handling or make <br> changes in your system just
+                                    give me command</div>
+                            </div>
+                            <!-- Search UI -->
+                            <div
+                                style="position:absolute; bottom:40px; left:20px; right:20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:15px">
+                                <div style="display:flex; justify-content:space-between; align-items:center">
+                                    <div style="font-size:12px; color:rgba(255,255,255,0.8)">Provide me full report |
+                                    </div>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" style="color:var(--accent)">
+                                        <path d="m22 2-7 20-4-9-9-4Z" />
+                                        <path d="M22 2 11 13" />
+                                    </svg>
+                                </div>
+                                <div style="display:flex; gap:8px; margin-top:12px">
+                                    <div
+                                        style="padding:4px 8px; border-radius:4px; border:1px solid rgba(255,255,255,0.1); font-size:10px; color:rgba(255,255,255,0.4)">
+                                        + Add document</div>
+                                </div>
+                            </div>
+                            <!-- Footer Buttons -->
+                            <div
+                                style="position:absolute; bottom:15px; left:50%; transform:translateX(-50%); display:flex; gap:10px; opacity:0.6">
+                                <div style="font-size:10px; display:flex; align-items:center; gap:4px"><svg width="10"
+                                        height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg> Analyze</div>
+                                <div style="font-size:10px; display:flex; align-items:center; gap:4px"><svg width="10"
+                                        height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                        <circle cx="8.5" cy="8.5" r="1.5" />
+                                        <path d="M21 15l-5-5L5 21" />
+                                    </svg> Generate Image</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feat-row rv">
+                    <div class="feat-text">
+                        <div class="pill-tag">FilmMaking</div>
+                        <h2 class="sec-title" style="text-align:left;margin-bottom:15px">AI -Filmmaking</h2>
+                        <p style="margin-bottom:20px; color:rgba(255,255,255,0.7); line-height:1.6">Create cinematic,
+                            story-driven AI videos for brands, products, and ideas. From concept to final output, we
+                            focus on narrative, not just visuals.</p>
+                        <div style="display:flex; gap:12px; flex-wrap:wrap">
+                            <div class="btn-feat">AI- Ads</div>
+                            <div class="btn-feat">AI-Music Videos</div>
+                            <div class="btn-feat">AI- UGC Content</div>
+                            <div class="btn-feat">AI- Music Video</div>
+                        </div>
+                    </div>
+                    <div class="feat-img">
+                        <div class="film-thumb"
+                            style="width:100%; height:100%; background:url('ai_filmmaking_bg_1771261754929.png') center/cover; position:relative; display:flex; align-items:center; justify-content:center">
+                            <div style="position:absolute; inset:0; background:rgba(0,0,0,0.4)"></div>
+                            <div
+                                style="z-index:1; padding:10px 20px; background:rgba(255,255,255,0.1); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.2); border-radius:30px; font-size:14px; color:#fff">
+                                Your Film Ready</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feat-row rv" style="flex-direction:row-reverse">
+                    <div class="feat-text">
+                        <div class="pill-tag">Sales & Marketing</div>
+                        <h2 class="sec-title" style="text-align:left;margin-bottom:15px">AI Agents</h2>
+                        <p style="margin-bottom:20px; color:rgba(255,255,255,0.7); line-height:1.6">Design smart agents
+                            that automate tasks, answer questions, and support workflows. Built to reduce effort, save
+                            time, and scale operations.</p>
+                    </div>
+                    <div class="feat-img">
+                        <div class="lead-table"
+                            style="background:rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.05); border-radius:15px; padding:15px">
+                            <div class="lead-header"
+                                style="opacity:0.3; font-size:10px; margin-bottom:12px; display:flex; justify-content:space-between">
+                                <span>Name</span><span>Company</span><span>Status</span>
+                            </div>
+                            <div class="lead-row"
+                                style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05)">
+                                <div style="display:flex; align-items:center; gap:8px">
+                                    <div
+                                        style="width:24px; height:24px; border-radius:50%; background:rgba(255,255,255,0.1)">
+                                    </div>
+                                    <span style="font-size:12px">Alex Johnson</span>
+                                </div>
+                                <span style="font-size:12px; opacity:0.6">TechCorp</span>
+                                <span
+                                    style="padding:4px 10px; border-radius:100px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); font-size:10px; color:rgba(255,255,255,0.9)">Verified</span>
+                            </div>
+                            <div class="lead-row"
+                                style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05)">
+                                <div style="display:flex; align-items:center; gap:8px">
+                                    <div
+                                        style="width:24px; height:24px; border-radius:50%; background:rgba(255,255,255,0.1)">
+                                    </div>
+                                    <span style="font-size:12px">Sarah Chen</span>
+                                </div>
+                                <span style="font-size:12px; opacity:0.6">DataFlow</span>
+                                <span
+                                    style="padding:4px 10px; border-radius:100px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); font-size:10px; color:rgba(255,255,255,0.9)">Verified</span>
+                            </div>
+                            <div class="lead-row"
+                                style="display:flex; justify-content:space-between; align-items:center; padding:10px 0">
+                                <div style="display:flex; align-items:center; gap:8px">
+                                    <div
+                                        style="width:24px; height:24px; border-radius:50%; background:rgba(255,255,255,0.1)">
+                                    </div>
+                                    <span style="font-size:12px">Mike Peters</span>
+                                </div>
+                                <span style="font-size:12px; opacity:0.6">InnovatAI</span>
+                                <span
+                                    style="padding:4px 10px; border-radius:100px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); font-size:10px; color:rgba(255,255,255,0.9)">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- AI FILMMAKING VIDEO SECTION -->
+        <section class="sec film-sec">
+            <div class="divider-soft" style="position:absolute;top:0;left:0;right:0;z-index:1"></div>
+            <div class="glow" style="top:-249px;bottom:auto"></div>
+            <div class="film-hdr rv">
+                <div class="film-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                            d="m15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                        <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <span>AI-Filmmaking</span>
+                </div>
+                <h2 class="film-title">Create <em
+                        style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">stunning</em>
+                    visuals with AI</h2>
+                <p class="film-sub">Transform your creative vision into reality with our AI-powered filmmaking platform.
+                    Generate professional-grade content including ads, music videos, and UGC at a fraction of the
+                    traditional cost and time.</p>
+            </div>
+            <div class="film-video rv rv-d1">
+                <video autoplay muted loop playsinline>
+                    <source src="https://framerusercontent.com/assets/1C3x1AuuZUDChScTlQUmJQFA.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="testi rv rv-d2">
+                <div class="testi-avatar"><img
+                        src="https://framerusercontent.com/images/AuLZB6EXiR01Rnuv6zTELWtREVA.png?width=574&height=571"
+                        alt="User"></div>
+                <div class="testi-text"><span class="testi-stars">★★★★★</span> Trusted by 50+ businesses worldwide</div>
+                <div class="divider-soft" style="position:absolute;bottom:0;left:0;right:0;z-index:1"></div>
+                <div class="glow"></div>
+            </div>
+        </section><!-- BENEFITS -->
+        <section class="sec ben-sec" id="benefits">
+            <div class="sec-inner" style="gap:60px;align-items:center">
+                <div class="sec-hdr rv" style="max-width:800px">
+                    <div class="tag">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                        </svg>
+                        Benefits
+                    </div>
+                    <h2 class="sec-title">The Key Benefits of AI for Your Business Growth</h2>
+                    <p class="sec-sub">Discover how AI-powered solutions can transform your operations, reduce costs,
+                        and accelerate your business growth with measurable results.</p>
+                </div>
+                <div class="ben-grid"
+                    style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; width:100%; margin-top:40px">
+                    <div class="ben-card rv"
+                        style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                        <div class="ben-icon"
+                            style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size:18px; font-weight:600">Increased Productivity</h4>
+                        <p style="font-size:14px; opacity:0.6; line-height:1.6">Automate repetitive tasks and free up
+                            your team to focus on high-value work that drives real business growth.</p>
+                    </div>
+                    <div class="ben-card rv rv-d1"
+                        style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                        <div class="ben-icon"
+                            style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size:18px; font-weight:600">Time Efficiency</h4>
+                        <p style="font-size:14px; opacity:0.6; line-height:1.6">Reduce processing time by up to 80% with
+                            intelligent automation that works around the clock without breaks.</p>
+                    </div>
+                    <div class="ben-card rv rv-d2"
+                        style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                        <div class="ben-icon"
+                            style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M16 8l-4 4-2-2" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size:18px; font-weight:600">Cost Reduction</h4>
+                        <p style="font-size:14px; opacity:0.6; line-height:1.6">Lower operational costs through smart
+                            automation while maintaining quality and improving output consistency.</p>
+                    </div>
+                    <div class="ben-card rv"
+                        style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                        <div class="ben-icon"
+                            style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size:18px; font-weight:600">Data-Driven Insights</h4>
+                        <p style="font-size:14px; opacity:0.6; line-height:1.6">Leverage advanced analytics to uncover
+                            patterns, predict trends, and make informed decisions with confidence.</p>
+                    </div>
+                    <div class="ben-card rv rv-d1"
+                        style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                        <div class="ben-icon"
+                            style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size:18px; font-weight:600">Enhanced Security</h4>
+                        <p style="font-size:14px; opacity:0.6; line-height:1.6">AI-powered threat detection and response
+                            systems that protect your business data and customer information 24/7.</p>
+                    </div>
+                    <div class="ben-card rv rv-d2"
+                        style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                        <div class="ben-icon"
+                            style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h4 style="font-size:18px; font-weight:600">Scalable Growth</h4>
+                        <p style="font-size:14px; opacity:0.6; line-height:1.6">Scale your operations seamlessly with AI
+                            systems that grow alongside your business without proportional cost increases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOUNDERS -->
+        <section class="sec" id="founders">
+            <div class="sec-inner">
+                <div class="sec-hdr rv">
+                    <div class="tag">VISIONARIES</div>
+                    <h2 class="sec-title">Meet the Founders</h2>
+                    <p class="sec-sub">The minds behind the AI evolution.</p>
+                </div>
+                <div class="svc-row rv" style="margin-top:40px; justify-content:center; gap:30px">
+                    <!-- Bharat Singh -->
+                    <div class="svc-card" style="min-height:auto; padding:40px; text-align:center; flex:0 1 400px">
+                        <div class="orb-container" style="min-height:160px; margin-bottom:20px">
+                            <div class="founder-planet-wrap">
+                                <div class="founder-planet planet-bharat"></div>
+                                <div class="founder-orbit orbit-1">
+                                    <div class="founder-moon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 style="font-size:24px; margin-bottom:5px">Bharat Singh</h3>
+                        <p
+                            style="color:var(--accent); font-weight:600; font-size:14px; margin-bottom:5px; text-transform:uppercase; letter-spacing:1px">
+                            Founder</p>
+                        <div class="email-wrap">
+                            <p style="font-size:13px; color:rgba(255,255,255,0.5); margin:0">udaanxai@gmail.com</p>
+                            <button class="copy-btn" onclick="copyToClipboard('udaanxai@gmail.com', this)"
+                                title="Copy Email">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:20px">Seamless
+                            operations head & future-ready AI solutions builder.</p>
+                        <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap">
+                            <a href="https://www.instagram.com/bharatx1st/" target="_blank"
+                                class="founder-social-link">Instagram</a>
+                            <a href="https://www.linkedin.com/in/bharatsinghofficial/" target="_blank"
+                                class="founder-social-link">LinkedIn</a>
+                        </div>
+                    </div><!-- Krishna Sharma -->
+                    <div class="svc-card" style="min-height:auto; padding:40px; text-align:center; flex:0 1 400px">
+                        <div class="orb-container" style="min-height:160px; margin-bottom:20px">
+                            <div class="founder-planet-wrap">
+                                <div class="founder-planet planet-krishna"></div>
+                                <div class="founder-orbit orbit-2" style="border-style: solid; opacity: 0.2;">
+                                    <div class="founder-moon"
+                                        style="left: auto; right: -4px; background: var(--accent);"></div>
+                                </div>
+                                <div class="founder-orbit orbit-1"
+                                    style="animation-duration: 8s; transform: rotateY(45deg);">
+                                    <div class="founder-moon" style="width: 6px; height: 6px;"></div>
+                                </div>
+                                <div class="founder-orbit orbit-3"
+                                    style="animation-duration: 10s; transform: rotateX(60deg);">
+                                    <div class="founder-moon" style="width: 4px; height: 4px; opacity: 0.6;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 style="font-size:24px; margin-bottom:5px">Krishna Sharma</h3>
+                        <p
+                            style="color:var(--accent); font-weight:600; font-size:14px; margin-bottom:5px; text-transform:uppercase; letter-spacing:1px">
+                            Co-Founder</p>
+                        <div class="email-wrap">
+                            <p style="font-size:13px; color:rgba(255,255,255,0.5); margin:0">rajkrisharma@gmail.com</p>
+                            <button class="copy-btn" onclick="copyToClipboard('rajkrisharma@gmail.com', this)"
+                                title="Copy Email">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:20px">
+                            Growth-targeted leader & strategic expansion specialist.</p>
+                        <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap">
+                            <a href="https://www.instagram.com/rajkrisharma/" target="_blank"
+                                class="founder-social-link">Instagram</a>
+                            <a href="https://www.linkedin.com/in/rajkrisharma/" target="_blank"
+                                class="founder-social-link">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="sec" id="contact" style="padding-top:0">
+            <div class="sec-inner">
+                <div class="svc-card rv" style="width:100%; max-width:900px; padding:60px; margin:0 auto; text-align:center;
+                background:rgba(255,255,255,0.06); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+                border:1px solid rgba(255,255,255,0.1)">
+                    <h2 class="sec-title" style="margin-bottom:10px">Let's Connect</h2>
+                    <p class="sec-sub" style="margin-bottom:40px">Direct line to our leadership team.</p>
+
+                    <form id="contact-form" class="contact-grid">
+                        <div class="form-group" style="display:flex; flex-direction:column; gap:8px">
+                            <label style="font-size:13px; font-weight:600; color:var(--text-muted)">Name <span
+                                    style="color:var(--accent)">*</span></label>
+                            <input type="text" id="name" placeholder="John Doe" required
+                                style="padding:14px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; color:#fff; outline:none">
+                        </div>
+                        <div class="form-group" style="display:flex; flex-direction:column; gap:8px">
+                            <label style="font-size:13px; font-weight:600; color:var(--text-muted)">Email <span
+                                    style="color:var(--accent)">*</span></label>
+                            <input type="email" id="email" placeholder="john@company.com" required
+                                style="padding:14px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; color:#fff; outline:none">
+                        </div>
+                        <div class="form-group" style="display:flex; flex-direction:column; gap:8px">
+                            <label style="font-size:13px; font-weight:600; color:var(--text-muted)">WhatsApp
+                                Number</label>
+                            <input type="tel" id="contact-number" placeholder="+91 98765 43210"
+                                style="padding:14px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; color:#fff; outline:none">
+                        </div>
+                        <div class="form-group" style="display:flex; flex-direction:column; gap:8px">
+                            <label style="font-size:13px; font-weight:600; color:var(--text-muted)">City <span
+                                    style="color:var(--accent)">*</span></label>
+                            <input type="text" id="city" placeholder="New York" required
+                                style="padding:14px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; color:#fff; outline:none">
+                        </div>
+                        <div class="form-group" style="display:flex; flex-direction:column; gap:8px">
+                            <label style="font-size:13px; font-weight:600; color:var(--text-muted)">Company Name</label>
+                            <input type="text" id="company-name" placeholder="Future Unicorn Inc."
+                                style="padding:14px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; color:#fff; outline:none">
+                        </div>
+                        <div class="form-group" style="display:flex; flex-direction:column; gap:8px">
+                            <label style="font-size:13px; font-weight:600; color:var(--text-muted)">LinkedIn
+                                Profile</label>
+                            <input type="text" id="linkedin" placeholder="linkedin.com/in/johndoe"
+                                style="padding:14px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; color:#fff; outline:none">
+                        </div>
+                        <div style="grid-column: span 2; margin-top:10px">
+                            <button type="submit" id="whatsapp-btn" class="btn-p"
+                                style="width:100%; justify-content:center">
+                                Launch via WhatsApp
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                                    style="margin-left:8px">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="sec-inner" style="padding:0 40px">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3>UdaanXAI</h3>
+                        <p>Deploying elite AI agents for businesses. Scaling, Automating, Designing, and Launching the
+                            future of enterprise operations.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Products</h4>
+                        <a href="#">AI Agents</a>
+                        <a href="#">Voice AI</a>
+                        <a href="#">AI Filmmaking</a>
+                        <a href="#">Automation</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#">Careers</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Socials</h4>
+                        <a href="https://www.youtube.com/@rajkrisharma" target="_blank" rel="noopener">YouTube</a>
+                        <a href="https://www.instagram.com/bharatx1st/" target="_blank" rel="noopener">Instagram</a>
+                        <a href="https://www.linkedin.com/in/bharatsinghofficial/" target="_blank"
+                            rel="noopener">LinkedIn</a>
+                        <a href="https://x.com/rajkrisharma" target="_blank" rel="noopener">X (Twitter)</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 UdaanXAI. All rights reserved.</p>
+                    <p
+                        style="margin-top:10px; opacity:0.6; font-size:12px; max-width:600px; margin-left:auto; margin-right:auto">
+                        UdaanXAI is a premier AI automation agency dedicated to scaling enterprises through cutting-edge
+                        intelligent systems. We specialize in deploying elite AI agents that redefine operational
+                        efficiency and creative excellence.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
